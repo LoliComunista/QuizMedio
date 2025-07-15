@@ -1,20 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #ffdf80;
-    margin: 2%;
-    border: 1px solid black;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fbe9e7, #ffe0b2);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
+/* Cabeçalho */
 header {
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-main {
-    border: 1px solid black;
-    padding: 10px;
-    display: block;
-    align-items: center;
+header h2 {
+  font-size: 22px;
+  color: #d84315;
+}
 
+/* Container principal */
+.app {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+.app h1 {
+  font-size: 32px;
+  color: #e64a19;
+  margin-bottom: 20px;
+}
+
+/* Bloco do quiz */
+.quiz {
+  margin-top: 20px;
+}
+
+/* Pergunta */
+#question {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Suporte para imagem da pergunta (futura) */
+.question-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões de resposta */
+#botao-resp {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e64a19;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #e64a19;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+  color: white;
+}
+
+/* Botão "Próximo" */
+#botao-prox {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff5722;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#botao-prox:hover {
+  background-color: #bf360c;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .app {
+    padding: 25px 20px;
+  }
+
+  .app h1 {
+    font-size: 26px;
+  }
+
+  #question {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  #botao-prox {
+    font-size: 15px;
+  }
 }
