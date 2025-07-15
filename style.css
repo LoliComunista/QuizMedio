@@ -1,134 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #fbe9e7, #ffe0b2);
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Cabeçalho */
 header {
-  margin-bottom: 20px;
-  text-align: center;
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
 }
 
-header h2 {
-  font-size: 22px;
-  color: #d84315;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    width: 100%;
 }
 
-/* Container principal */
 .app {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 600px;
-  width: 100%;
-  text-align: center;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
 }
 
-/* Título */
-.app h1 {
-  font-size: 32px;
-  color: #e64a19;
-  margin-bottom: 20px;
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ffcc00;
 }
 
-/* Bloco do quiz */
-.quiz {
-  margin-top: 20px;
+.quiz img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-/* Pergunta */
 #question {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-/* Suporte para imagem da pergunta (futura) */
-.question-image {
-  width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* Botões de resposta */
-#botao-resp {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.btn {
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #e64a19;
-  border-radius: 10px;
-  background-color: transparent;
-  color: #e64a19;
-  cursor: pointer;
-  transition: all 0.3s ease;
+#answer-buttons .btn {
+    width: 80%;
+    max-width: 300px;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #2e2e2e;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .btn:hover {
-  background-color: #e64a19;
-  color: white;
+    background-color: #444;
 }
 
-/* Botão "Próximo" */
-#botao-prox {
-  margin-top: 30px;
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: #ff5722;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s ease;
+#next-button {
+    width: 80%;
+    max-width: 300px;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
 }
 
-#botao-prox:hover {
-  background-color: #bf360c;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .app {
-    padding: 25px 20px;
-  }
-
-  .app h1 {
-    font-size: 26px;
-  }
-
-  #question {
-    font-size: 18px;
-  }
-
-  .btn {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  #botao-prox {
-    font-size: 15px;
-  }
+#next-button:hover {
+    background-color: #e6b800;
 }
